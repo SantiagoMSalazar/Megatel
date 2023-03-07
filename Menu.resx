@@ -620,7 +620,7 @@
   <data name="Column_eliminar_Empleado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
         2LXV3P6PUhlKaRClEJEoUW8hGsw0mBKRBhQpjd5SKal4SyUVypRGGrxoEJWIDGmiUVEoKUKjJvH7nye/
         6/+7Pcf5PM++z7X23uva9/k5js9xvMfx6nvtez97Xde6vmut7/dhIYQwAPPCFeCb4UfgSfBCeAu8E/4f
         eD+8CV4Mj4O7wNXhI2AIIYQQGoYP6+XgBvBD8ET4c/gA5EPe8Tb4BbgGDCGEEMKYeTJ8FeSb+tHwIngP
@@ -1002,16 +1002,25 @@
         5hrjuOSpF/42fws5kb0QfhMeBFksax24NAxhyDzsYf8fQIztQ6TSIQwAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Column_idAgenciaContrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Column_editar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column_eliminar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column_editar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_editar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column_editar_Contrato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="Column_eliminar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column_editar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column_editar_Cliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         IwAADiMBj1VACgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC8/SURBVHhe7d17
@@ -1219,13 +1228,13 @@
         0wAAydhaNpCPykqynLiXkR+w7u+oqljgfwHNJvSPgwwnFQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Column_eliminar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_eliminar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column_eliminar_Contrato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Column_eliminar_Cliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
         2LXV3P6PUhlKaRClEJEoUW8hGsw0mBKRBhQpjd5SKal4SyUVypRGGrxoEJWIDGmiUVEoKUKjJvH7nye/
         6/+7Pcf5PM++z7X23uva9/k5js9xvMfx6nvtez97Xde6vmut7/dhIYQwAPPCFeCb4UfgSfBCeAu8E/4f
         eD+8CV4Mj4O7wNXhI2AIIYQQGoYP6+XgBvBD8ET4c/gA5EPe8Tb4BbgGDCGEEMKYeTJ8FeSb+tHwIngP
@@ -1607,10 +1616,10 @@
         5hrjuOSpF/42fws5kb0QfhMeBFksax24NAxhyDzsYf8fQIztQ6TSIQwAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Column_editar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_editar_Plan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column_eliminar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_eliminar_Plan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column_editar_Plan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1830,7 +1839,7 @@
   <data name="Column_eliminar_Plan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
         2LXV3P6PUhlKaRClEJEoUW8hGsw0mBKRBhQpjd5SKal4SyUVypRGGrxoEJWIDGmiUVEoKUKjJvH7nye/
         6/+7Pcf5PM++z7X23uva9/k5js9xvMfx6nvtez97Xde6vmut7/dhIYQwAPPCFeCb4UfgSfBCeAu8E/4f
         eD+8CV4Mj4O7wNXhI2AIIYQQGoYP6+XgBvBD8ET4c/gA5EPe8Tb4BbgGDCGEEMKYeTJ8FeSb+tHwIngP
@@ -2435,7 +2444,7 @@
   <data name="Column_eliminar_Agencia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
         2LXV3P6PUhlKaRClEJEoUW8hGsw0mBKRBhQpjd5SKal4SyUVypRGGrxoEJWIDGmiUVEoKUKjJvH7nye/
         6/+7Pcf5PM++z7X23uva9/k5js9xvMfx6nvtez97Xde6vmut7/dhIYQwAPPCFeCb4UfgSfBCeAu8E/4f
         eD+8CV4Mj4O7wNXhI2AIIYQQGoYP6+XgBvBD8ET4c/gA5EPe8Tb4BbgGDCGEEMKYeTJ8FeSb+tHwIngP
@@ -2829,10 +2838,13 @@
   <metadata name="Column_direccion_estad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column_editar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_idAgenciaContrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column_editar_Cliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="Column_editar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column_editar_Contrato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         IwAADiMBj1VACgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC8/SURBVHhe7d17
@@ -3040,13 +3052,13 @@
         0wAAydhaNpCPykqynLiXkR+w7u+oqljgfwHNJvSPgwwnFQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Column_eliminar_Cliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column_eliminar_Contrato.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column_eliminar_Cliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Column_eliminar_Contrato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjCSURBVHhe7b0J
         2LXV3P6PUhlKaRClEJEoUW8hGsw0mBKRBhQpjd5SKal4SyUVypRGGrxoEJWIDGmiUVEoKUKjJvH7nye/
         6/+7Pcf5PM++z7X23uva9/k5js9xvMfx6nvtez97Xde6vmut7/dhIYQwAPPCFeCb4UfgSfBCeAu8E/4f
         eD+8CV4Mj4O7wNXhI2AIIYQQGoYP6+XgBvBD8ET4c/gA5EPe8Tb4BbgGDCGEEMKYeTJ8FeSb+tHwIngP

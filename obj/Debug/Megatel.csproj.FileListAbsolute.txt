@@ -24,13 +24,11 @@ C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Vis
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.exe.config
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.exe
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.pdb
-C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_AgenciaPlan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Cliente.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Contrato.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Empleado.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Plan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Agencia.resources
-C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_AgenciaPlan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Cliente.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Contrato.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Empleado.resources

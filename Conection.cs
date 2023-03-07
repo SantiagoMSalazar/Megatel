@@ -25,6 +25,8 @@ namespace Megatel
         {
         }
 
+        // ############################# OPERACIONES DE CONSULTA ##########################
+
         public DataTable consultar_Agencia(string Nombre)
         {
             DataTable dt = new DataTable();
@@ -116,11 +118,296 @@ namespace Megatel
                 Console.WriteLine("Error de conexión: " + ex.Message);
             }
 
-            
+            return dt;
+        }
+
+        public DataTable consultar_Contrato(string Nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT * FROM {Nombre}", connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                dt.Columns.Add("Column_idContrato", typeof(int));
+                dt.Columns.Add("Column_idCliente", typeof(int));
+                dt.Columns.Add("Column_idPLan", typeof(int));
+                dt.Columns.Add("Column_fechaEmision", typeof(SqlDateTime));
+                dt.Columns.Add("Column_minPermanencia", typeof(int));
+                dt.Columns.Add("Column_idAgencia", typeof(int));
+
+                while (reader.Read())
+                {
+                    dt.Rows.Add(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetSqlDateTime(3)
+                        , reader.GetInt32(4), reader.GetInt32(5);
+                }
+                // Cerrar la conexión
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
 
             return dt;
         }
 
+        public DataTable consultar_Empleado(string Nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
 
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT * FROM {Nombre}", connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                dt.Columns.Add("Column_idEmpleado", typeof(int));
+                dt.Columns.Add("Column_idAgencia", typeof(int));
+                dt.Columns.Add("Column_Nombre", typeof(string));
+                dt.Columns.Add("Column_Apellido", typeof(string));
+                dt.Columns.Add("Column_Direcion", typeof(string));
+                dt.Columns.Add("Column_fechaIngreso", typeof(SqlDateTime));
+                dt.Columns.Add("Column_Titulo", typeof(string));
+                dt.Columns.Add("Column_Tipo", typeof(string));
+                dt.Columns.Add("Column_Salario", typeof(SqlMoney));
+
+                while (reader.Read())
+                {
+                    dt.Rows.Add(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3)
+                        , reader.GetString(4), reader.GetSqlDateTime(5), reader.GetString(6), reader.GetString(7)
+                        , reader.GetSqlMoney(8));
+                }
+                // Cerrar la conexión
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public DataTable consultar_Cliente_estad(string Nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT * FROM {Nombre}", connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                dt.Columns.Add("Column_idCliente", typeof(int));
+                dt.Columns.Add("Column_direccion", typeof(string));
+
+                while (reader.Read())
+                {
+                    dt.Rows.Add(reader.GetInt32(0), reader.GetString(1));
+                }
+                // Cerrar la conexión
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return dt;
+        }
+
+        // ############################# OPERACIONES DE INSERCION ##########################
+
+
+        // ############################# OPERACIONES DE ELIMINACION ##########################
+
+        public void eliminar_Agencia(string Nombre, int idAgencia)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"DELETE FROM {Nombre} WHERE idAgencia = {idAgencia}", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+        }
+
+        public bool agencia_existe(string Nombre, int idAgencia)
+        {
+            bool existe = false;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {Nombre} WHERE idAgencia = {idAgencia}", connection);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    existe = true;
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return existe;
+        }
+
+        public void eliminar_Plan(string Nombre, int idPlan)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"DELETE FROM {Nombre} WHERE idPlan = {idPlan}", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+        }
+
+        public bool plan_existe(string Nombre, int idPlan)
+        {
+            bool existe = false;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {Nombre} WHERE idPlan = {idPlan}", connection);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    existe = true;
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return existe;
+        }
+        public void eliminar_Cliente(string Nombre, int idCliente)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"DELETE FROM {Nombre} WHERE IDCLIENTE = {idCliente}", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+        }
+
+        public bool cliente_existe(string Nombre, int idCliente)
+        {
+            bool existe = false;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {Nombre} WHERE idCliente = {idCliente}", connection);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    existe = true;
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return existe;
+        }
+
+        public void eliminar_Contrato(string Nombre, int idContrato)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"DELETE FROM {Nombre} WHERE idContrato = {idContrato}", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+        }
+
+        public bool contrato_existe(string Nombre, int idContrato)
+        {
+            bool existe = false;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {Nombre} WHERE idContrato = {idContrato}", connection);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    existe = true;
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return existe;
+        }
+
+        public void eliminar_Empleado(string Nombre, int idEmpleado)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"DELETE FROM {Nombre} WHERE idEmpleado = {idEmpleado}", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+        }
+
+        public bool empleado_existe(string Nombre, int idEmpleado)
+        {
+            bool existe = false;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {Nombre} WHERE idEmpleado = {idEmpleado}", connection);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    existe = true;
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error de conexión: " + ex.Message);
+            }
+
+            return existe;
+        }
+
+        // ############################# OPERACIONES DE ACTUALIZACION ##########################
     }
 }

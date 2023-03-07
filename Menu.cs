@@ -26,22 +26,11 @@ namespace Megatel
             llenarTablaClienteInfo();
             llenarTablaAgencia();
             llenarTablaPlan();
+            llenarTablaContrato();
+            llenarTablaEmpleado();
+            llenarTablaClienteEstad();
         }
-
-        public void llenarTablaClienteInfo()
-        {
-            this.dataGridView_Cliente.Rows.Clear();
-            DataTable dt = con.consultar_Cliente("V_Cliente_info");
-
-            foreach (DataRow row in dt.Rows)
-            {
-                // dgvClientes
-                this.dataGridView_Cliente.Rows.Add(row["Column_idCliente"], row["Column_idAgenciaCliente"],
-                    row["Column_CC"], row["Column_NombreCliente"], row["Column_ApellidoCliente"], row["Column_Celular"],
-                    row["Column_email"]);
-            }
-        }
-
+        
         public void llenarTablaAgencia()
         {
             this.dataGridView_Agencia.Rows.Clear();
@@ -68,6 +57,59 @@ namespace Megatel
             }
         }
 
+        public void llenarTablaClienteInfo()
+        {
+            this.dataGridView_Cliente.Rows.Clear();
+            DataTable dt = con.consultar_Cliente("V_Cliente_info");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                // dgvClientes
+                this.dataGridView_Cliente.Rows.Add(row["Column_idCliente"], row["Column_idAgenciaCliente"],
+                    row["Column_CC"], row["Column_NombreCliente"], row["Column_ApellidoCliente"], row["Column_Celular"],
+                    row["Column_email"]);
+            }
+        }
+
+        public void llenarTablaContrato()
+        {
+            this.dataGridView_Contrato.Rows.Clear();
+            DataTable dt = con.consultar_Cliente("Contrato_02");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                // dgvClientes
+                this.dataGridView_Cliente.Rows.Add(row["Column_idContrato"], row["Column_idCliente"],
+                    row["Column_idPLan"], row["Column_fechaEmision"], row["Column_minPermanencia"], row["Column_idAgencia"]);
+            }
+        }
+
+        public void llenarTablaEmpleado()
+        {
+            this.dataGridView_Contrato.Rows.Clear();
+            DataTable dt = con.consultar_Cliente("Cliente_estadisticas");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                // dgvClientes
+                this.dataGridView_Cliente.Rows.Add(row["Column_idEmpleado"], row["Column_idAgencia"],
+                    row["Column_Nombre"], row["Column_Apellido"], row["Column_Direcion"], row["Column_fechaIngreso"],
+                    row["Column_Titulo"], row["Column_Tipo"], row["Column_Salario"]);
+            }
+        }
+
+        public void llenarTablaClienteEstad()
+        {
+            this.dataGridView_Contrato.Rows.Clear();
+            DataTable dt = con.consultar_Cliente("Cliente_estadisticas");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                // dgvClientes
+                this.dataGridView_Cliente.Rows.Add(row["Column_idCliente"], row["Column_direccion"]);
+            }
+        }
+
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             Menu menu =  new Menu();
@@ -89,7 +131,19 @@ namespace Megatel
             {
                 if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int idAgencia = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_idAgencia"].Value.ToString());
+
+                    con.eliminar_Agencia("V_Agencia", idAgencia);
+
+                    if (con.agencia_existe("V_Agencia", idAgencia))
+                    {
+                        MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
                 }
             }
         }
@@ -107,7 +161,19 @@ namespace Megatel
             {
                 if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int idPlan = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_IdPlan"].Value.ToString());
+
+                    con.eliminar_Agencia("Plan_M", idPlan);
+
+                    if (con.agencia_existe("Plan_M", idPlan))
+                    {
+                        MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
             }
         }
@@ -123,9 +189,24 @@ namespace Megatel
 
             if (dataGridView_Cliente.Columns[e.ColumnIndex].Name == "Column_eliminar_Cliente" && e.RowIndex >= 0)
             {
-                if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (dataGridView_Plan.Columns[e.ColumnIndex].Name == "Column_eliminar_Plan" && e.RowIndex >= 0)
                 {
-                    MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        int idCliente = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_idCliente"].Value.ToString());
+
+                        con.eliminar_Agencia("Cliente_info_02", idCliente);
+
+                        if (con.agencia_existe("Cliente_info_02", idCliente))
+                        {
+                            MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
                 }
             }
         }
@@ -143,7 +224,19 @@ namespace Megatel
             {
                 if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int idContrato = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_idContrato"].Value.ToString());
+
+                    con.eliminar_Agencia("Contrato_02", idContrato);
+
+                    if (con.agencia_existe("Contrato_02", idContrato))
+                    {
+                        MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
             }
         }
@@ -161,7 +254,19 @@ namespace Megatel
             {
                 if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int idEmpleado = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_idEmpleado"].Value.ToString());
+
+                    con.eliminar_Agencia("Empleado_02", idEmpleado);
+
+                    if (con.agencia_existe("Empleado_02", idEmpleado))
+                    {
+                        MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
             }
         }
