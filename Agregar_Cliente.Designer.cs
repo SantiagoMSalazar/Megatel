@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_idcliente = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox8
@@ -189,12 +189,12 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 37;
             // 
-            // textBox1
+            // textBox_idcliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 36;
+            this.textBox_idcliente.Location = new System.Drawing.Point(205, 26);
+            this.textBox_idcliente.Name = "textBox_idcliente";
+            this.textBox_idcliente.Size = new System.Drawing.Size(100, 20);
+            this.textBox_idcliente.TabIndex = 36;
             // 
             // Agregar_Cliente
             // 
@@ -218,7 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_idcliente);
             this.Name = "Agregar_Cliente";
             this.Text = "Agregar Cliente";
             this.ResumeLayout(false);
@@ -245,6 +245,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_idcliente;
     }
 }

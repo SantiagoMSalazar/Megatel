@@ -24,13 +24,11 @@ C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Vis
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.exe.config
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.exe
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\bin\Debug\Megatel.pdb
-C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_AgenciaPlan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Cliente.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Contrato.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Empleado.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Editar_Plan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Agencia.resources
-C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_AgenciaPlan.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Cliente.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Contrato.resources
 C:\Users\david\OneDrive\Escritorio\POLI 4TO PERIODO SOFTWARE\BD DISTRIBUIDAS\Visual Studio\Megatel\obj\Debug\Megatel.Agregar_Empleado.resources
@@ -79,3 +77,25 @@ C:\Users\Administrador\Documents\BDD\intefaz\Megatel\obj\Debug\Megatel.csproj.Ge
 C:\Users\Administrador\Documents\BDD\intefaz\Megatel\obj\Debug\Megatel.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\BDD\intefaz\Megatel\obj\Debug\Megatel.exe
 C:\Users\Administrador\Documents\BDD\intefaz\Megatel\obj\Debug\Megatel.pdb
+C:\BDD\Megatel-develop_David\bin\Debug\Megatel.exe.config
+C:\BDD\Megatel-develop_David\bin\Debug\Megatel.exe
+C:\BDD\Megatel-develop_David\bin\Debug\Megatel.pdb
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.csproj.AssemblyReference.cache
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.csproj.SuggestedBindingRedirects.cache
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Agregar_Agencia.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Agregar_Cliente.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Agregar_Contrato.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Agregar_Empleado.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Agregar_Plan.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Editar_Agencia.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Editar_Cliente.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Editar_Contrato.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Editar_Empleado.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Editar_Plan.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Login.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Menu.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.Properties.Resources.resources
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.csproj.GenerateResource.cache
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.csproj.CoreCompileInputs.cache
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.exe
+C:\BDD\Megatel-develop_David\obj\Debug\Megatel.pdb
