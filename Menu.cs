@@ -120,20 +120,21 @@ namespace Megatel
         {
             if (dataGridView_Agencia.Columns[e.ColumnIndex].Name == "Column_editar_Agencia" && e.RowIndex >= 0)
             {
-                Editar_Agencia ea = new Editar_Agencia();
+                /*Editar_Agencia ea = new Editar_Agencia();
                 ea.StartPosition = FormStartPosition.CenterParent;
-                ea.ShowDialog();
+                ea.ShowDialog();*/
+                MessageBox.Show("Opción de editar está deshabilitada para agencia", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             if (dataGridView_Agencia.Columns[e.ColumnIndex].Name == "Column_eliminar_Agencia" && e.RowIndex >= 0)
             {
-                if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                /*if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int idAgencia = Int32.Parse(this.dataGridView_Agencia.Rows[e.RowIndex].Cells["Column_idAgencia"].Value.ToString());
 
                     con.eliminar_Agencia("V_Agencia", idAgencia);
 
-                    if (con.agencia_existe("V_Agencia", idAgencia))
+                    if (!con.agencia_existe("V_Agencia", idAgencia))
                     {
                         MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -142,7 +143,9 @@ namespace Megatel
                         MessageBox.Show("No se ha podido eliminar el registro", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     
-                }
+                }*/
+
+                MessageBox.Show("Opción de eliminar está deshabilitada para agencia", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             llenarTablaAgencia();
         }
@@ -164,7 +167,7 @@ namespace Megatel
 
                     con.eliminar_Plan("Plan_M", idPlan);
 
-                    if (con.plan_existe("Plan_M", idPlan))
+                    if (!con.plan_existe("Plan_M", idPlan))
                     {
                         MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -182,22 +185,22 @@ namespace Megatel
         {
             if (dataGridView_Cliente.Columns[e.ColumnIndex].Name == "Column_editar_Cliente" && e.RowIndex >= 0)
             {
-                Editar_Cliente ec = new Editar_Cliente();
+                Editar_Cliente ec = new Editar_Cliente(int.Parse(this.dataGridView_Cliente.Rows[e.RowIndex].Cells["Column_idCliente"].Value.ToString()));
                 ec.StartPosition = FormStartPosition.CenterParent;
                 ec.ShowDialog();
             }
 
             if (dataGridView_Cliente.Columns[e.ColumnIndex].Name == "Column_eliminar_Cliente" && e.RowIndex >= 0)
             {
-                if (dataGridView_Cliente.Columns[e.ColumnIndex].Name == "Column_eliminar_Cliente" && e.RowIndex >= 0)
-                {
-                    if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Desea continuar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        int idCliente = Int32.Parse(this.dataGridView_Cliente.Rows[e.RowIndex].Cells["Column_idCliente"].Value.ToString());
+                        //MessageBox.Show(this.dataGridView_Cliente.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                        con.eliminar_Cliente("V_Cliente_info", idCliente);
+                        int idCliente = int.Parse(this.dataGridView_Cliente.Rows[e.RowIndex].Cells["Column_idCliente"].Value.ToString());
 
-                        if (con.cliente_existe("V_Cliente_info", idCliente))
+                        con.eliminar_Cliente("dbo.V_Cliente_info", idCliente);
+
+                       if (!con.cliente_existe("V_Cliente_info", idCliente))
                         {
                             MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -207,7 +210,7 @@ namespace Megatel
                         }
 
                     }
-                }
+                
             }
             llenarTablaClienteInfo();
             llenarTablaClienteEstad();
@@ -230,7 +233,7 @@ namespace Megatel
 
                     con.eliminar_Contrato("Contrato_02", idContrato);
 
-                    if (con.contrato_existe("Contrato_02", idContrato))
+                    if (!con.contrato_existe("Contrato_02", idContrato))
                     {
                         MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -259,9 +262,9 @@ namespace Megatel
                 {
                     int idEmpleado = Int32.Parse(this.dataGridView_Empleado.Rows[e.RowIndex].Cells["Column_idEmpleado"].Value.ToString());
 
-                    con.eliminar_Empleado("Empleado_02", idEmpleado);
+                    con.eliminar_Empleado("V_Empleado", idEmpleado);
 
-                    if (con.empleado_existe("Empleado_02", idEmpleado))
+                    if (!con.empleado_existe("Empleado_02", idEmpleado))
                     {
                         MessageBox.Show("Registro eliminado con éxito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -280,29 +283,42 @@ namespace Megatel
             switch (tabControl_Tablas_i.SelectedIndex)
             {
                 case 0:
-                    Agregar_Agencia aa = new Agregar_Agencia();
-                    aa.StartPosition = FormStartPosition.CenterParent;
-                    aa.ShowDialog();
+                    //Agregar_Agencia aa = new Agregar_Agencia();
+                    //aa.StartPosition = FormStartPosition.CenterParent;
+                    //aa.ShowDialog();
+
+                    SystemSounds.Beep.Play();
+                    MessageBox.Show("Opción de agregar está deshabilitada", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    llenarTablaAgencia();
                     break;
                 case 1:
                     Agregar_Plan ap = new Agregar_Plan();
                     ap.StartPosition = FormStartPosition.CenterParent;
                     ap.ShowDialog();
+
+                    llenarTablaPlan();
                     break;
                 case 2:
                     Agregar_Cliente ac = new Agregar_Cliente();
                     ac.StartPosition = FormStartPosition.CenterParent;
                     ac.ShowDialog();
+
+                    llenarTablaClienteInfo();
                     break;
                 case 3:
                     Agregar_Contrato acon = new Agregar_Contrato();
                     acon.StartPosition = FormStartPosition.CenterParent;
                     acon.ShowDialog();
+
+                    llenarTablaContrato();
                     break;
                 case 4:
                     Agregar_Empleado aemp = new Agregar_Empleado();
-                    aemp.ShowDialog();
                     aemp.StartPosition = FormStartPosition.CenterParent;
+                    aemp.ShowDialog();
+
+                    llenarTablaEmpleado();
                     break;
                 case 5:
                     SystemSounds.Beep.Play();
@@ -341,22 +357,70 @@ namespace Megatel
 
         private void textBox_Buscar_KeyPress(object sender, KeyPressEventArgs e)
         {
+            DataTable dt;
             switch (tabControl_Tablas_i.SelectedIndex)
             {
                 case 0:
-                    
+                    this.dataGridView_Agencia.Rows.Clear();
+                    dt = con.Buscar_Agencia(this.textBox_Buscar.Text);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // dgvClientes
+                        this.dataGridView_Agencia.Rows.Add(row["Column_idAgencia"], row["Column_Direccion"],
+                            row["Column_Ciudad"]);
+                    }
+
                     break;
                 case 1:
-                    
+                    this.dataGridView_Plan.Rows.Clear();
+                    dt = con.Buscar_Plan(textBox_Buscar.Text);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // dgvClientes
+                        this.dataGridView_Plan.Rows.Add(row["Column_idPlan"], row["Column_nombrePlan"],
+                            row["Column_cantMegas"], row["Column_Precio"]);
+                    }
                     break;
                 case 2:
-                    
+                    this.dataGridView_Cliente.Rows.Clear();
+                    dt = con.Buscar_Cliente(this.textBox_Buscar.Text);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // dgvClientes
+                        this.dataGridView_Cliente.Rows.Add(row["Column_idCliente"], row["Column_idAgenciaCliente"],
+                            row["Column_CC"], row["Column_NombreCliente"], row["Column_ApellidoCliente"], row["Column_Celular"],
+                            row["Column_email"]);
+                    }
+
                     break;
                 case 3:
-                    
+                    this.dataGridView_Contrato.Rows.Clear();
+
+                    dt = con.Buscar_Contrato(this.textBox_Buscar.Text);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // dgvClientes
+                        this.dataGridView_Contrato.Rows.Add(row["Column_idContrato"], row["Column_idCliente_Contrato"],
+                            row["Column_idPLan_Contrato"], row["Column_FechaEmision"], row["Column_MinPermanencia"], row["Column_idAgenciaContrato"]);
+                    }
+
                     break;
                 case 4:
-                    
+                    this.dataGridView_Empleado.Rows.Clear();
+                    dt = con.Buscar_Empleado(this.textBox_Buscar.Text);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // dgvClientes
+                        this.dataGridView_Empleado.Rows.Add(row["Column_idEmpleado"], row["Column_idAgencia_Empleado"],
+                            row["Column_Nombre_Empleado"], row["Column_Apellido_Empleado"], row["Column_Direccion_Empleado"], row["Column_FechaIngreso_Empleado"],
+                            row["Column_Titulo_Empleado"], row["Column_Tipo_Empleado"], row["Column_Salario_Empleado"]);
+                    }
+
+
                     break;
                 default:
                     break;
@@ -371,9 +435,6 @@ namespace Megatel
             llenarTablaAgencia();
             llenarTablaPlan();
             llenarTablaEmpleado();
-            
-
-
         }
     }
 }
